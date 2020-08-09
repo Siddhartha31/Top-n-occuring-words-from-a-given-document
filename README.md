@@ -1,1 +1,4 @@
 # Top-n-occuring-words-from-a-given-document
+Front-end: Html Css
+Back-end:Django
+This is a web-application in which it fetches data from given server link using packages(bs4,requests) and helps to count the frequency of each word in the text/sentence provided. In this "Submission" is the project-name and "main" is the app-name. So at first if we open the url/website , from "Submission" urls.py it will move to "main" urls.py ,initially page created in html5 can be seen with a number to enter home.html page stored in main/templates/sub/home.html. If a number entered in the starting page and submitting it leads to definition "freq"views.py which computes the frequency and returns to frontend in form of dict. Finally in the frontend using table both keys and values are fetched in two different columns and result is displayed.
