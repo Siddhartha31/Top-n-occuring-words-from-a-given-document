@@ -1,0 +1,64 @@
+{% load static %}
+
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Top N Occuring Words</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	</head>
+	<body>
+		 <div class="row">
+    <form class="col s12" method="post" action="freq">
+    	 {% csrf_token %}
+      <div class="row">
+        <div class="input-field col ">
+        	<label for="n_number" class="center-align" >Enter the Number</label>
+          <input name="n" id="n_number" type="number" class="validate">
+          
+        </div>
+       </div>
+		
+			
+		
+			
+			<div class="left-align"  id='but'>
+			 <button class="btn waves-effect waves-light" type="submit" name="action" style="margin-left: 15px">Submit
+    		 <i class="material-icons right"></i>
+             </button>
+            </div>
+            <br>
+  
+		</form>
+		
+			<table class="centered">
+		
+        <thead >
+          <tr>
+              <th> Word </th>
+              <th> Number of Occurencies</th>
+              
+          </tr>
+        </thead>
+        
+      
+        <tbody >
+        	{% for i, j in Answer.items %}
+          <tr>
+            <td>{{i}}</td>
+            <td>{{j}}</td>
+            
+          </tr>
+          {% endfor %}
+          </tbody>
+		
+			
+		
+
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+	
+		
+	</body>
+</html>
